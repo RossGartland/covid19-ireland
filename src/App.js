@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import Nav from "./components/nav/nav.component";
 import Stats from "./pages/stats/stats.component";
 import Map from './pages/map/map.component';
@@ -9,11 +9,11 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter  basename={process.env.PUBLIC_URL}>
         <Nav />
-        <Route exact path={process.env.PUBLIC_URL + '/'}  component={Stats} />
-        <Route path={process.env.PUBLIC_URL + '/map'} component={Map} />
-      </BrowserRouter>
+        <Route exact path='/' component={Stats} />
+        <Route path='/map' component={Map} />
+      </HashRouter>
     </div>
   );
 }
