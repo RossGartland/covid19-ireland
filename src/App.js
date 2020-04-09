@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Nav />
-        <Route exact path="/" component={Stats} />
-        <Route path="/map" component={Map} />
+        <Route exact path={process.env.PUBLIC_URL + '/'}  component={Stats} />
+        <Route path={process.env.PUBLIC_URL + '/map'} component={Map} />
       </BrowserRouter>
     </div>
   );
