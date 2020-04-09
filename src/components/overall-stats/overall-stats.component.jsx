@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 const Overall = () => {
+
     return (
         <div class="card">
             <h5 class="card-header">Ireland</h5>

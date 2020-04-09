@@ -1,0 +1,10 @@
+.customlink {
+    font-weight: bold;
+    color:black;
+    text-decoration: none;
+}
+.customlink:hover {
+    font-weight: bold;
+    color: rgb(36, 138, 206);
+    text-decoration: none;
+}
