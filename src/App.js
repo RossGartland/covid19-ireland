@@ -9,7 +9,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <HashRouter  basename={process.env.PUBLIC_URL}>
+      <HashRouter>
         <Nav />
         <Route exact path='/' component={Stats} />
         <Route path='/map' component={Map} />
