@@ -19,7 +19,7 @@ const Nav = () => {
                             <a class="nav-link" href="#/map">Map</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="#/advice">Advice</a>
+                            <a class="nav-link" href="#/faq">F&Q</a>
                         </li>
                     </ul>
                 </div>

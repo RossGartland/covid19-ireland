@@ -4,7 +4,7 @@ import Nav from "./components/nav/nav.component";
 import Footer from './components/footer/footer.component';
 import Stats from "./pages/stats/stats.component";
 import Map from './pages/map/map.component';
-import Advice from './pages/advice/advice.component';
+import faq from './pages/faq/faq.component';
 import StatsBanner from "./components/overall-stats/stats-banner/stats-banner.component";
 import "./App.css";
 
@@ -16,7 +16,7 @@ function App() {
         <div>
         <Route exact path='/' component={Stats} />
         <Route path='/map' component={Map} />
-        <Route path='/advice' component={Advice} />
+        <Route path='/faq' component={faq} />
         </div>
       </HashRouter>
       <Footer/>
