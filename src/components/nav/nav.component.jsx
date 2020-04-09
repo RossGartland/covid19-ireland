@@ -18,8 +18,15 @@ const Nav = () => {
                         <li >
                             <a class="nav-link" href="#/map">MAP</a>
                         </li>
-                        <li>
-                            <a class="nav-link" href="#/faq">F&Q</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                INFO</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            
+                                <a class="dropdown-item" href="#">Coronavirus</a>
+                                <a class="dropdown-item" href="#/work">WORK</a>
+                                <a class="dropdown-item" href="#/faq">F&Q</a>
+                            </div>
                         </li>
                         <li>
                             <a class="nav-link" href="#/about">ABOUT</a>

@@ -17,3 +17,13 @@
     text-decoration: none;
     color: #555;
   }
+
+  .our-team-main:hover .team-front {
+    bottom: -200px;
+    transition: all 0.5s ease
+}
+
+.our-team-main:hover {
+    border-color: #FF0000;
+    transition: 0.5s
+}
