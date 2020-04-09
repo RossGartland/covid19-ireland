@@ -9,10 +9,12 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      <Nav />
       <HashRouter>
-        <Nav />
+        <div>
         <Route exact path='/' component={Stats} />
         <Route path='/map' component={Map} />
+        </div>
       </HashRouter>
     </div>
   );
