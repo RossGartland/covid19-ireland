@@ -1,6 +1,7 @@
 import React from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import Nav from "./components/nav/nav.component";
+import Footer from './components/footer/footer.component';
 import Stats from "./pages/stats/stats.component";
 import Map from './pages/map/map.component';
 import Advice from './pages/advice/advice.component';
@@ -18,6 +19,7 @@ function App() {
         <Route path='/advice' component={Advice} />
         </div>
       </HashRouter>
+      <Footer/>
     </div>
   );
 }
