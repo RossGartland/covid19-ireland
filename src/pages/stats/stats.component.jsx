@@ -1,6 +1,8 @@
 import React from 'react';
 import Overall from '../../components/overall-stats/overall-stats.component';
 import RegStats from '../../components/regional-stats/regional-stats.component';
+import SubRegionStatsNI from '../../components/sub-region-stats/sub-region-stats-ni.component';
+import SubRegionStatsROI from '../../components/sub-region-stats/sub-region-stats-roi.component';
 import * as firebase from 'firebase';
 import fb from '../../firebase';
 
@@ -16,7 +18,7 @@ class Stats extends React.Component{
             roiCases:0,
             roiDeaths: 0,
             roiTested: 0,
-            regValue: ""
+            regValue: "",
         }  
     }
 

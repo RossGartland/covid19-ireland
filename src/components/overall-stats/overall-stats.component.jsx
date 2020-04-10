@@ -4,7 +4,7 @@ const Overall = (props) => {
 
     return (
         <div class="card">
-            <h5 class="card-header">Ireland</h5>
+            <h4 class="card-header">Ireland</h4>
             <div class="card-body">
                 <h5 class="card-title">Cases: {props.totalCases}</h5>
                 <h5 class="card-title">Deaths: {props.totalDeaths}</h5>
