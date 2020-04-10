@@ -23,7 +23,9 @@ function App() {
         <Route path='/about' component={About} />
         <Route path='/work' component={Work}/>
         <Route path='/Workni' render={(props) => <WorkInfo {...props} title={`Northern Ireland Job Advice`} />}/>
-        <Route path='/Workie' render={(props) => <WorkInfo {...props} title={`Republic of Ireland Job Advice`} />}/>
+        <Route path='/Workie' render={(props) => <WorkInfo {...props} title={`Republic of Ireland Job Advice`} q1={"COVID-19 Pandemic Unemployment Payment "} 
+        a1={"If you have lost your job due to COVID-19 you can apply for the COVID-19 Pandemic Unemployment Payment."+ 
+        "You can apply for this whether you are an employee or if you are self-employed. "} />}/>
         </div>
       </HashRouter>
       <Footer/>
