@@ -1,5 +1,4 @@
 import React from 'react'
-import Info from '../../work/job-information/job-information.component';
 
 import './choose-region.style.css';
 
@@ -13,9 +12,9 @@ const ChooseRegion = (props) => {
     }
 
     return (
-        <div class="card">
+        <div class="card" id="work-region-card">
             <div class="card-body">
-                <h5 class="card-title">{props.region}</h5>
+                <h5 class="card-title" id="work-region-title">{props.region}</h5>
                 <p class="card-text">{props.text}</p>
                 <a href={props.link} class="card-link">Click Me!</a>
             </div>
