@@ -1,0 +1,12 @@
+#cases {
+    color:lightblue;
+}
+#deaths {
+    color: red;
+}
+#tested {
+    color: green;
+}
+.stats-num {
+    font-weight: bold;
+}

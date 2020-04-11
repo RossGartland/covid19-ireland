@@ -7,7 +7,8 @@ import Map from './pages/map/map.component';
 import faq from './pages/faq/faq.component';
 import About from './pages/about/about.component';
 import Work from './pages/out-of-work/out-of-work.component';
-import WorkInfo from './components/work/job-information/job-information.component';
+import WorkInfoNI from './pages/out-of-work/work-info-ni.component';
+import WorkInfoRoi from './pages/out-of-work/work-info-roi.component';
 import StatsBanner from "./components/overall-stats/stats-banner/stats-banner.component";
 import "./App.css";
 
@@ -22,10 +23,8 @@ function App() {
         <Route path='/faq' component={faq} />
         <Route path='/about' component={About} />
         <Route path='/work' component={Work}/>
-        <Route path='/Workni' render={(props) => <WorkInfo {...props} title={`Northern Ireland Job Advice`} />}/>
-        <Route path='/Workie' render={(props) => <WorkInfo {...props} title={`Republic of Ireland Job Advice`} q1={"COVID-19 Pandemic Unemployment Payment "} 
-        a1={"If you have lost your job due to COVID-19 you can apply for the COVID-19 Pandemic Unemployment Payment."+ 
-        "You can apply for this whether you are an employee or if you are self-employed. "} />}/>
+        <Route path='/Workni'component={WorkInfoNI}/>
+        <Route path='/Workroi'component={WorkInfoRoi}/>
         </div>
       </HashRouter>
       <Footer/>

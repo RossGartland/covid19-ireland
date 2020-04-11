@@ -12,7 +12,7 @@ const Work = () => {
         <div>
         <div id="region-container">
             <ChooseRegion className="ChooseRegion" region={"Northern Ireland"} text={"Go here if you work in Northern Ireland"} link={"#/workni"}/>
-            <ChooseRegion region={"Republic Of Ireland"} text={"Go here if you work in the Republic of Ireland"} link={"#/workie"}/>
+            <ChooseRegion region={"Republic Of Ireland"} text={"Go here if you work in the Republic of Ireland"} link={"#/workroi"}/>
         </div>
         </div>
     )

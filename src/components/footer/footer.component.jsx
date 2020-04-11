@@ -4,7 +4,7 @@ import './footer.style.css';
 const Footer = () => {
     return (
         <footer class="">
-            <div>By Ross and Jordan
+            <div>By Ross Gartland and Jordan Stevenson
                 
             </div>
         </footer>
