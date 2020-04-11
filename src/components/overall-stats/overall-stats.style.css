@@ -1,0 +1,29 @@
+#overall-card {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+#overall-title {
+    font-weight: bold;
+    color:green;
+    font-size: 40px;
+}
+.card-title-overall {
+    font-weight: bold;
+    font-size: 20px;
+}
+.card-title-overall:hover {
+    color:red;
+}
+
+@media only screen and (max-width: 720px) {
+    #overall-card {
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    #overall-card {
+        width: 370px;
+    }
+}

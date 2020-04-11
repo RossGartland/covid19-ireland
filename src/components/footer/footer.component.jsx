@@ -3,11 +3,11 @@ import './footer.style.css';
 
 const Footer = () => {
     return (
-        <footer class="">
+        <div class="footer">
             <div>By Ross Gartland and Jordan Stevenson
                 
             </div>
-        </footer>
+        </div>
     )
 }
 

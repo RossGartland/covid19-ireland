@@ -1,12 +1,25 @@
-#cases {
-    color:lightblue;
+#reg-stats-card {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
 }
-#deaths {
-    color: red;
-}
-#tested {
-    color: green;
-}
-.stats-num {
+#reg-stats-title {
     font-weight: bold;
+    color:green;
+    font-size: 35px;
+}
+.reg-stats-nums {
+    font-weight: bold;
+    font-size: 15px;
+}
+.reg-stats-nums:hover {
+    font-weight: bold;
+    font-size: 15px;
+    color:red;
+}
+
+@media only screen and (max-width: 520px) {
+    #reg-stats-card {
+        width: 330px;
+    }
 }

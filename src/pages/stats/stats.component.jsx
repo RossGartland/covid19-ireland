@@ -1,4 +1,6 @@
 import React from 'react';
+import HeadingCommon from 'react';
+import Hero from '../../components/hero/hero-home/hero-home.component';
 import Overall from '../../components/overall-stats/overall-stats.component';
 import RegStats from '../../components/regional-stats/regional-stats.component';
 import SubRegionStatsNI from '../../components/sub-region-stats/sub-region-stats-ni.component';
@@ -62,11 +64,15 @@ class Stats extends React.Component{
     render() {
         return (
             <React.Fragment>
+                
+            <div class="parallax">
+                <Hero/>
+            </div>
             <Overall totalCases={this.state.niCases+this.state.roiCases} totalDeaths={this.state.niDeaths+this.state.roiDeaths} totalTested={this.state.niTested+this.state.roiTested}/>
             <div className="regions">         
                 <RegStats regValue={"Northern Ireland"} Cases={this.state.niCases} Deaths={this.state.niDeaths} Tested={this.state.niTested} />
                 <RegStats regValue={"Republic of Ireland"} Cases={this.state.roiCases} Deaths={this.state.roiDeaths} Tested={this.state.roiTested}/>
-            </div>
+            </div>      
         </React.Fragment>
         )
     }

@@ -1,3 +1,22 @@
 .regions {
     display: inline-flex;
 }
+.parallax {
+    /* The image used */
+    background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../../assets/roi_landscape.jpg");
+  
+    /* Set a specific height */
+    min-height: 650px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media only screen and (max-width: 820px) {
+    .regions{
+        display: grid;
+    }
+}
