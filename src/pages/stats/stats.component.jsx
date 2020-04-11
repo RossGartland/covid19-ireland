@@ -5,6 +5,7 @@ import Overall from '../../components/overall-stats/overall-stats.component';
 import RegStats from '../../components/regional-stats/regional-stats.component';
 import SubRegionStatsNI from '../../components/sub-region-stats/sub-region-stats-ni.component';
 import SubRegionStatsROI from '../../components/sub-region-stats/sub-region-stats-roi.component';
+import Banner from '../../components/banner/home-banner/home-banner.component';
 import * as firebase from 'firebase';
 import fb from '../../firebase';
 
@@ -73,6 +74,7 @@ class Stats extends React.Component{
                 <RegStats regValue={"Northern Ireland"} Cases={this.state.niCases} Deaths={this.state.niDeaths} Tested={this.state.niTested} />
                 <RegStats regValue={"Republic of Ireland"} Cases={this.state.roiCases} Deaths={this.state.roiDeaths} Tested={this.state.roiTested}/>
             </div>      
+            <Banner/>
         </React.Fragment>
         )
     }
