@@ -1,4 +1,5 @@
 import React from 'react';
+import './accordion.style.css';
 
 const Accordion = ({ q1, a1, q2, a2, q3, a3, q4, a4, q5, a5 }) => {
     return (
