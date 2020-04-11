@@ -1,0 +1,11 @@
+.list-group {
+    width:50%;
+    margin-left:25%;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+#county-stats-headings {
+    color:green;
+    font-weight: bold;
+}

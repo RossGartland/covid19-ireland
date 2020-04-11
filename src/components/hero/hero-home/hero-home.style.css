@@ -8,12 +8,12 @@
   font-weight: 0;
 }
 #home-hero-button {
-  border: black;
+  border: green;
   color: white;
 }
 #home-hero-button:hover {
     border: white;
-    color: black;
+    color: green;
   }
   
   @media only screen and (min-width: 1000px) {
