@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/covid-ninteen-ni/precache-manifest.7659bf6234b03f409b3f5e30c86b9e03.js"
+  "/covid-ninteen-ni/precache-manifest.24a22d0c11eb4158059b5ffc2e1949ba.js"
 );
 
 self.addEventListener('message', (event) => {
