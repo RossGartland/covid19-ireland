@@ -9,7 +9,7 @@ import About from './pages/about/about.component';
 import Work from './pages/out-of-work/out-of-work.component';
 import WorkInfoNI from './pages/out-of-work/work-info-ni.component';
 import WorkInfoRoi from './pages/out-of-work/work-info-roi.component';
-import StatsBanner from "./components/overall-stats/stats-banner/stats-banner.component";
+import CovidInfo from './pages/covid-info/covid-info.component';
 import "./App.css";
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
         <Route path='/work' component={Work}/>
         <Route path='/Workni'component={WorkInfoNI}/>
         <Route path='/Workroi'component={WorkInfoRoi}/>
+        <Route path='/covidupdates' component={CovidInfo}/>
         </div>
       </HashRouter>
       <Footer/>

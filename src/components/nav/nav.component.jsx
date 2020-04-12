@@ -23,7 +23,7 @@ const Nav = () => {
                                 INFO</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             
-                                <a class="dropdown-item" href="#">Coronavirus</a>
+                                <a class="dropdown-item" href="#/covidupdates">Updates</a>
                                 <a class="dropdown-item" href="#/work">WORK</a>
                                 <a class="dropdown-item" href="#/faq">F&Q</a>
                             </div>
