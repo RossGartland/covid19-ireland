@@ -7,6 +7,9 @@ import CountyStats from '../../components/county-stats/county-stats.component';
 import Banner from '../../components/banner/home-banner/home-banner.component';
 import * as firebase from 'firebase';
 import fb from '../../firebase';
+import Charts from '../../components/charts/charts.component';
+
+
 
 import './stats.style.css';
 
@@ -61,6 +64,8 @@ class Stats extends React.Component{
         })//There must be a better way to do this...   
     }
 
+      
+
     render() {
         return (
             <React.Fragment>
@@ -73,7 +78,8 @@ class Stats extends React.Component{
                 <RegStats regValue={"Northern Ireland"} Cases={this.state.niCases} Deaths={this.state.niDeaths} Tested={this.state.niTested} />
                 <RegStats regValue={"Republic of Ireland"} Cases={this.state.roiCases} Deaths={this.state.roiDeaths} Tested={this.state.roiTested}/>
             </div>  
-            <CountyStats/>    
+            <CountyStats/>   
+            <Charts nicases={this.state.nicases}/>
             <Banner/>
         </React.Fragment>
         )
