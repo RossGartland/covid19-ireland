@@ -72,6 +72,20 @@ class Charts extends React.Component {
                 }}
                 />
             </div>
+            <div className="chart">
+                <Line data={this.state.chartData} width={50} height={400} options={{
+                    maintainAspectRatio: false,
+                    title: {
+                        display: true,
+                        text: 'Northern Ireland cases by county'
+                    },
+                    legend: {
+                        display: true,
+                        position: 'bottom'
+                    }
+                }}
+                />
+            </div>
             </React.Fragment>
         )
     }

@@ -1,0 +1,12 @@
+.navbar {
+  z-index: 2;
+  position: fixed;
+  font-weight: bold;
+}
+
+.nav-item {
+  color: black;
+}
+#navbarNav > ul > li:hover a {
+  color: green;
+}

@@ -9,7 +9,9 @@ const HeadingCommon = ({ title, bgImage }) => {
     return (
         <div>
             <div className="title-container" style={style}>
-                <h1 id="hero">{title}</h1>
+                <div class="hero-text">
+                    <h1 id="heading-common-title">{title}</h1>
+                </div>
             </div>
         </div>
     )

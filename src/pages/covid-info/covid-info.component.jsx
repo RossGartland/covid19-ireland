@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import HeadingCommon from '../../components/heading-common/heading-common.component'
-import covidImage from '../../assets/covid.jpg';
-import Accordion from '../../components/accordion/accordion.component';
+import covidImage from '../../assets/covid_cleaning.jpg';
 
 import './covid-info.style.css';
 
