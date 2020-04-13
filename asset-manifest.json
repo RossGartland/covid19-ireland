@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/covid-ninteen-ni/static/css/main.738d5821.chunk.css",
-    "main.js": "/covid-ninteen-ni/static/js/main.aadd72ec.chunk.js",
-    "main.js.map": "/covid-ninteen-ni/static/js/main.aadd72ec.chunk.js.map",
+    "main.css": "/covid-ninteen-ni/static/css/main.27b2273c.chunk.css",
+    "main.js": "/covid-ninteen-ni/static/js/main.8de753fc.chunk.js",
+    "main.js.map": "/covid-ninteen-ni/static/js/main.8de753fc.chunk.js.map",
     "runtime-main.js": "/covid-ninteen-ni/static/js/runtime-main.de4a6f3a.js",
     "runtime-main.js.map": "/covid-ninteen-ni/static/js/runtime-main.de4a6f3a.js.map",
-    "static/js/2.75e43901.chunk.js": "/covid-ninteen-ni/static/js/2.75e43901.chunk.js",
-    "static/js/2.75e43901.chunk.js.map": "/covid-ninteen-ni/static/js/2.75e43901.chunk.js.map",
+    "static/js/2.c4c780eb.chunk.js": "/covid-ninteen-ni/static/js/2.c4c780eb.chunk.js",
+    "static/js/2.c4c780eb.chunk.js.map": "/covid-ninteen-ni/static/js/2.c4c780eb.chunk.js.map",
     "index.html": "/covid-ninteen-ni/index.html",
-    "precache-manifest.24a22d0c11eb4158059b5ffc2e1949ba.js": "/covid-ninteen-ni/precache-manifest.24a22d0c11eb4158059b5ffc2e1949ba.js",
+    "precache-manifest.9d82438570cebe26a87fa877b30b4965.js": "/covid-ninteen-ni/precache-manifest.9d82438570cebe26a87fa877b30b4965.js",
     "service-worker.js": "/covid-ninteen-ni/service-worker.js",
-    "static/css/main.738d5821.chunk.css.map": "/covid-ninteen-ni/static/css/main.738d5821.chunk.css.map",
-    "static/js/2.75e43901.chunk.js.LICENSE.txt": "/covid-ninteen-ni/static/js/2.75e43901.chunk.js.LICENSE.txt",
+    "static/css/main.27b2273c.chunk.css.map": "/covid-ninteen-ni/static/css/main.27b2273c.chunk.css.map",
+    "static/js/2.c4c780eb.chunk.js.LICENSE.txt": "/covid-ninteen-ni/static/js/2.c4c780eb.chunk.js.LICENSE.txt",
     "static/media/home-banner.style.css": "/covid-ninteen-ni/static/media/belfast_city_hall.a0b92c50.jpg",
     "static/media/covid_cleaning.jpg": "/covid-ninteen-ni/static/media/covid_cleaning.14cc108a.jpg",
     "static/media/giants_causeway.jpg": "/covid-ninteen-ni/static/media/giants_causeway.88369da9.jpg",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.de4a6f3a.js",
-    "static/js/2.75e43901.chunk.js",
-    "static/css/main.738d5821.chunk.css",
-    "static/js/main.aadd72ec.chunk.js"
+    "static/js/2.c4c780eb.chunk.js",
+    "static/css/main.27b2273c.chunk.css",
+    "static/js/main.8de753fc.chunk.js"
   ]
 }
