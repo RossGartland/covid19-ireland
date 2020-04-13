@@ -5,13 +5,16 @@ class CountyStats extends React.Component {
 
     constructor(props) {
         super(props);
-
     }
 
     render() {
 
         return (
             <div>
+                <p id="county-data-text">HSCNI releases figures by council area compared to their counter parts in the Republic who release them by county.
+                    <br/>
+                    Figures represented by 0 are in place beacuse there is currently no data avaible.
+                </p>
                 <table class="table table-striped county-table">
                     <thead>
                         <tr>
@@ -27,7 +30,7 @@ class CountyStats extends React.Component {
                         {
                             this.props.counties && this.props.counties.length ?
                                 this.props.counties.map(item =>
-                                    <tr>
+                                    <tr key={item.countyName}>
                                         <td>{item.countyName}</td>
                                         <td>{item.countyCases}</td>
                                         <td>{item.countyDeaths}</td>

@@ -18,6 +18,7 @@ class Stats extends React.Component {
         }
     }
 
+  
     componentDidMount() {
 
         //Creates a reference to a location in the DB
@@ -67,17 +68,28 @@ class Stats extends React.Component {
                 })
             }
 
+            let newCountiesNamesList = [];//Holds counties.
+
+            for(let item in counties) {
+                newCountiesNamesList.push({
+                    name: counties[item].name,
+                })
+            }
+
             this.setState({
                 counties: countiesList,
+                countiesNamesList: newCountiesNamesList,
                 numCounties: countiesList.length
             })
         })
+
+
     }
+
 
     render() {
         return (
             <React.Fragment>
-
                 <div class="parallax">
                     <Hero />
                 </div>
@@ -87,8 +99,7 @@ class Stats extends React.Component {
                     <RegStats regValue={"Republic of Ireland"} Cases={this.state.roiCases} Deaths={this.state.roiDeaths} Tested={this.state.roiTested} />
                 </div>
                 <CountyStats counties={this.state.counties} />
-                <Charts nicases={this.state.nicases} />
-                <Banner />
+                <Charts />
             </React.Fragment>
         )
     }
