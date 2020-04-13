@@ -1,42 +1,47 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './county-stats.style.css';
 
-const CountyStats = () => {
+class CountyStats extends React.Component {
 
-    
-    const [counties] = useState(
-        [
-            {
-                name: 'Armagh',
-                cases: 90,
-                deaths: 5,
-                tested: 192
-            },
-            {
-                name: 'Derry',
-                cases: 262,
-                deaths: 90,
-                tested: 401
-            }
-        ]
-    )
+    constructor(props) {
+        super(props);
 
-    return (
-        <div>
-            <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center" id="county-stats-headings">
-                    County <span>Cases</span><span>Deaths</span><span>Tested</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Down <span>1</span><span>2</span><span>3</span>
-                </li>
-                {
-                    counties.map(county => <li class="list-group-item d-flex justify-content-between align-items-center">
-                    {county.name}<span>{county.cases}</span><span>{county.deaths}</span><span>{county.tested}</span>
-                </li>)
-                }
-            </ul>
-        </div>
-    )
+    }
+
+    render() {
+
+        return (
+            <div>
+                <table class="table table-striped county-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">County</th>
+                            <th scope="col">Cases</th>
+                            <th scope="col">Deaths</th>
+                            <th scope="col">Tested</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                        {
+                            this.props.counties && this.props.counties.length ?
+                                this.props.counties.map(item =>
+                                    <tr>
+                                        <td>{item.countyName}</td>
+                                        <td>{item.countyCases}</td>
+                                        <td>{item.countyDeaths}</td>
+                                        <td>{item.countyTested}</td>
+                                    </tr>
+
+                                )
+                                :
+                                null
+                        }
+                    </tbody>
+                </table>
+            </div>
+        )
+    }
 }
 export default CountyStats;
