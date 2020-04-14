@@ -25,6 +25,8 @@ const CovidInfo = () => {
             <br />
             <a class="twitter-timeline" data-width="600" data-height="500" href="https://twitter.com/merrionstreet?ref_src=twsrc%5Etfw">Tweets by merrionstreet</a>
             <a class="twitter-timeline" data-width="600" data-height="500" data-theme="light" href="https://twitter.com/DHSCgovuk?ref_src=twsrc%5Etfw">Tweets by DHSCgovuk</a>
+            <br/>
+            <a class="twitter-timeline" data-width="600" data-height="500" href="https://twitter.com/SkyNewsBreak?ref_src=twsrc%5Etfw">Tweets by SkyNewsBreak</a>
         </div>
     )
 }

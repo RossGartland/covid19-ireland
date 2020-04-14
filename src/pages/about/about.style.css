@@ -6,4 +6,7 @@
     .container {
         margin: 0 auto;
     }
+    .lead {
+        padding: 10px 250px;
+    }
 }
