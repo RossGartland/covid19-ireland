@@ -3,7 +3,7 @@
 }
 #work-region-card {
     height: 150px;
-    width: 400px;;
+    max-width: 400px;;
 }
 #work-region-title {
     color:green;

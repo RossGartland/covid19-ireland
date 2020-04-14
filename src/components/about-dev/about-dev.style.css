@@ -31,7 +31,7 @@
     transition: 0.5s
 }
 @media only screen and (min-width: 1200px) {
-  .test {
+  .about-box {
     min-width: 450px;
     margin: 0 auto;
   }

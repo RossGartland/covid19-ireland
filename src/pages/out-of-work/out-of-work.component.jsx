@@ -9,7 +9,7 @@ const Work = () => {
     const [region, text, link] = useState("");
     
     return (
-        <div>
+        <div className="advice-container">
             <h1 class="display-4">Advice For Employees</h1>
             <p class="lead">We have sourced information from both the Northern Irish Governement and the Irish Governement</p>
             <hr class="my-4" />

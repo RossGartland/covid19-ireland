@@ -12,7 +12,7 @@ const AboutDev = (props) => {
     }
 
     return (
-        <div class="col-xl-3 col-md-6 mb-4 test">
+        <div class="col-xl-3 col-md-6 mb-4 about-box">
             <div class="card border-0 shadow">
                 <img src={props.image} class="card-img-top" alt="Image of dev" />
                 <div class="card-body text-center">
