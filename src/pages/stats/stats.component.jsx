@@ -7,7 +7,7 @@ import Banner from '../../components/banner/home-banner/home-banner.component';
 import * as firebase from 'firebase';
 import fb from '../../firebase';
 import Charts from '../../components/charts/charts.component';
-
+import Sources from '../../components/sources/sources.component';
 import './stats.style.css';
 
 class Stats extends React.Component {
@@ -100,7 +100,9 @@ class Stats extends React.Component {
                     <RegStats regValue={"Republic of Ireland"} Cases={this.state.roiCases} Deaths={this.state.roiDeaths} Tested={this.state.roiTested} />
                 </div>
                 <CountyStats counties={this.state.counties} />
+                <hr/>
                 <Charts />
+                <Sources/>
             </React.Fragment>
         )
     }
