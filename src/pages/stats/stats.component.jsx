@@ -31,7 +31,9 @@ class Stats extends React.Component {
 
             this.setState({
                 niCases: ni.cases,
+                niNewCases: ni.newCases,
                 niDeaths: ni.deaths,
+                niNewDeaths: ni.newDeaths,
                 niTested: ni.tested,
             })
         })
@@ -45,8 +47,10 @@ class Stats extends React.Component {
 
             this.setState({
                 roiCases: roi.cases,
+                roiNewCases: roi.newCases,
                 roiDeaths: roi.deaths,
-                roiTested: roi.tested,
+                roiNewDeaths: roi.newDeaths,
+                roiTested: roi.tested,            
             })
         })
 
@@ -94,10 +98,10 @@ class Stats extends React.Component {
                 <div class="parallax">
                     <Hero />
                 </div>
-                <Overall totalCases={this.state.niCases + this.state.roiCases} totalDeaths={this.state.niDeaths + this.state.roiDeaths} totalTested={this.state.niTested + this.state.roiTested} />
+                <Overall totalCases={this.state.niCases + this.state.roiCases} newTotalCases={this.state.niNewCases + this.state.roiNewCases} totalDeaths={this.state.niDeaths + this.state.roiDeaths} newTotalDeaths={this.state.roiNewDeaths + this.state.niNewDeaths} totalTested={this.state.niTested + this.state.roiTested} />
                 <div className="regions">
-                    <RegStats regValue={"Northern Ireland"} Cases={this.state.niCases} Deaths={this.state.niDeaths} Tested={this.state.niTested} />
-                    <RegStats regValue={"Republic of Ireland"} Cases={this.state.roiCases} Deaths={this.state.roiDeaths} Tested={this.state.roiTested} />
+                    <RegStats regValue={"Northern Ireland"} Cases={this.state.niCases} newCases={this.state.niNewCases} Deaths={this.state.niDeaths} newDeaths={this.state.niNewDeaths} Tested={this.state.niTested} />
+                    <RegStats regValue={"Republic of Ireland"} Cases={this.state.roiCases} newCases={this.state.roiNewCases} Deaths={this.state.roiDeaths} newDeaths={this.state.roiNewDeaths} Tested={this.state.roiTested} />
                 </div>
                 <CountyStats counties={this.state.counties} />
                 <hr/>
