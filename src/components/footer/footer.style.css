@@ -6,7 +6,18 @@
     line-height: 60px;
     background-color: #f5f5f5;
 }
-
+.footer div {
+    display:inline-flex;
+}
+.footer div h5{
+    padding-right: 10px;
+}
 a i {
     padding: 5px;
 }
+
+@media only screen and (max-width: 600px) {
+    .footer h5{
+        font-size:16px;
+    }
+  }

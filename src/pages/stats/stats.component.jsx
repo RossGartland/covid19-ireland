@@ -20,6 +20,7 @@ class Stats extends React.Component {
 
   
     componentDidMount() {
+        
 
         //Creates a reference to a location in the DB
         const niRef = fb.database().ref('ni');
