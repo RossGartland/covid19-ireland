@@ -10,6 +10,7 @@ import Work from "./pages/out-of-work/out-of-work.component";
 import WorkInfoNI from "./pages/out-of-work/work-info-ni.component";
 import WorkInfoRoi from "./pages/out-of-work/work-info-roi.component";
 import CovidInfo from "./pages/covid-info/covid-info.component";
+import PageNotFound from './pages/page-not-found/PageNotFound';
 import "./App.css";
 
 import * as firebase from "firebase/app";
@@ -66,6 +67,7 @@ function App() {
           <Route path="/Workni" component={WorkInfoNI} />
           <Route path="/Workroi" component={WorkInfoRoi} />
           <Route path="/covidupdates" component={CovidInfo} />
+          <Route component={PageNotFound} />
         </div>
       </HashRouter>
       <Footer />
