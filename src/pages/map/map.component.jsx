@@ -5,7 +5,7 @@ const Map = () => {
     return (
         <div className="map-container">
         <div class="embed-responsive embed-responsive-16by9">
-            <iframe className="map" src="https://www.google.com/maps/d/embed?mid=1a04iBi41DznkMaQRnICO40ktROfnMfMx" width="1800" height="900"></iframe>
+            <iframe src="https://www.google.com/maps/d/embed?mid=17uETzH31UQGdH8esyOlJvLHOcB8lV9E2" width="500" height="450"></iframe>
         </div>
         </div>
     )

@@ -55,6 +55,21 @@ class Stats extends React.Component {
         })
 
         //Creates a reference to a location in the DB
+        const ieRef = fb.database().ref('island');
+
+        ieRef.on('value', snapshot => {
+
+            let ie = snapshot.val();//Holds the snapshot
+
+            this.setState({
+                totalCases: ie.cases,
+                totalDeaths: ie.deaths,
+                totalTested: ie.tested,
+                lastUpdated: ie.lastUpdated
+            })
+        })
+
+        //Creates a reference to a location in the DB
         const countiesRef = fb.database().ref('counties');
 
         //Gets data from reference.
@@ -98,10 +113,12 @@ class Stats extends React.Component {
                 <div class="parallax">
                     <Hero />
                 </div>
-                <Overall totalCases={this.state.niCases + this.state.roiCases} newTotalCases={this.state.niNewCases + this.state.roiNewCases} totalDeaths={this.state.niDeaths + this.state.roiDeaths} newTotalDeaths={this.state.roiNewDeaths + this.state.niNewDeaths} totalTested={this.state.niTested + this.state.roiTested} />
+                <Overall totalPopulation={"6.786 million"} totalCases={this.state.totalCases} newTotalCases={this.state.niNewCases + this.state.roiNewCases} 
+                totalDeaths={this.state.totalDeaths} newTotalDeaths={this.state.roiNewDeaths + this.state.niNewDeaths} totalTested={this.state.totalTested} 
+                lastUpdated={this.state.lastUpdated}/>
                 <div className="regions">
-                    <RegStats regValue={"Northern Ireland"} Cases={this.state.niCases} newCases={this.state.niNewCases} Deaths={this.state.niDeaths} newDeaths={this.state.niNewDeaths} Tested={this.state.niTested} />
-                    <RegStats regValue={"Republic of Ireland"} Cases={this.state.roiCases} newCases={this.state.roiNewCases} Deaths={this.state.roiDeaths} newDeaths={this.state.roiNewDeaths} Tested={this.state.roiTested} />
+                    <RegStats population={"1.882 million"} regValue={"Northern Ireland"} Cases={this.state.niCases} newCases={this.state.niNewCases} Deaths={this.state.niDeaths} newDeaths={this.state.niNewDeaths} Tested={this.state.niTested} />
+                    <RegStats population={"4.904 million"} regValue={"Republic of Ireland"} Cases={this.state.roiCases} newCases={this.state.roiNewCases} Deaths={this.state.roiDeaths} newDeaths={this.state.roiNewDeaths} Tested={this.state.roiTested} />
                 </div>
                 <CountyStats counties={this.state.counties} />
                 <hr/>

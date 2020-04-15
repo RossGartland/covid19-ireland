@@ -15,6 +15,9 @@
 .card-title-overall:hover {
     color:red;
 }
+#last-updated {
+    color:orangered;
+}
 
 @media only screen and (max-width: 720px) {
     #overall-card {

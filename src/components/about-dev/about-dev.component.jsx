@@ -6,14 +6,6 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const AboutDev = (props) => {
 
-    function handleChange(event) {
-        props.onChange(event.target.image);
-        props.onChange(event.target.name);
-        props.onChange(event.target.title);
-        props.onChange(event.target.linkedin);
-        props.onChange(event.target.github);
-    }
-
     return (
         <div class="col-xl-3 col-md-6 mb-4 about-box">
             <div class="card border-0 shadow">

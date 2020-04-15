@@ -13,7 +13,7 @@ class CountyStats extends React.Component {
             <div>
                 <p id="county-data-text">HSCNI releases figures by council area compared to their counter parts in the Republic who release them by county.
                     <br/>
-                    Figures represented by 0 are in place because there is currently no data avaible.
+                    Figures represented by N/A are in place because there is currently no data avaible.
                 </p>
                 <table class="table table-striped county-table">
                     <thead>
