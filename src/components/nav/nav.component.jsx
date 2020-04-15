@@ -18,7 +18,7 @@ const MyNav = () => {
         <div>     
             <Navbar collapseOnSelect className="navbar navbar-expand-lg navbar-light navbar-inverse nav-fill w-100" expand="lg" style={{ background: window.scrollY > 0 ? "white" : "transparent" }}>
                 <Navbar.Brand href="#">COVID-19 IRELAND</Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav" >
                     <Nav className="mr-auto">
                         <Nav.Link href="#/">HOME</Nav.Link>

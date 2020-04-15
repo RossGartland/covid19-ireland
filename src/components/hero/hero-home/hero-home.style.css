@@ -1,3 +1,6 @@
+#hero-heading {
+  font-size: 4rem;
+}
 .hero-text {
   text-align: center;
   position: absolute;
@@ -20,5 +23,6 @@
       .hero-text {
         top: 40%;
       }
+      
   }
 
