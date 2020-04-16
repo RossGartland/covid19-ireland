@@ -15,7 +15,7 @@ import "./App.css";
 
 import * as firebase from "firebase/app";
 import "firebase/analytics";
-import fb from './firebase';
+
 
 
 
@@ -67,7 +67,6 @@ function App() {
           <Route path="/Workni" component={WorkInfoNI} />
           <Route path="/Workroi" component={WorkInfoRoi} />
           <Route path="/covidupdates" component={CovidInfo} />
-          <Route component={PageNotFound} />
         </div>
       </HashRouter>
       <Footer />

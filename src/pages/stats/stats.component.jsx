@@ -1,9 +1,9 @@
 import React from 'react';
 import Hero from '../../components/hero/hero-home/hero-home.component';
+import LockdownBanner from '../../components/banner/home-banner/home-banner.component';
 import Overall from '../../components/overall-stats/overall-stats.component';
 import RegStats from '../../components/regional-stats/regional-stats.component';
 import CountyStats from '../../components/county-stats/county-stats.component';
-import Banner from '../../components/banner/home-banner/home-banner.component';
 import * as firebase from 'firebase';
 import fb from '../../firebase';
 import Charts from '../../components/charts/charts.component';
@@ -113,6 +113,7 @@ class Stats extends React.Component {
                 <div class="parallax">
                     <Hero />
                 </div>
+                <LockdownBanner/>
                 <Overall totalPopulation={"6.786 million"} totalCases={this.state.totalCases} newTotalCases={this.state.niNewCases + this.state.roiNewCases} 
                 totalDeaths={this.state.totalDeaths} newTotalDeaths={this.state.roiNewDeaths + this.state.niNewDeaths} totalTested={this.state.totalTested} 
                 lastUpdated={this.state.lastUpdated}/>

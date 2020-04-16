@@ -1,6 +1,6 @@
 import React from 'react';
 import HeadingCommon from '../../components/heading-common/heading-common.component';
-import FAQImage from '../../assets/roi_landscape.jpg'
+import FAQImage from '../../assets/belfast_city_hall.jpg'
 import Accordion from '../../components/accordion/accordion.component';
 import './faq.style.css';
 

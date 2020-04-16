@@ -1,36 +1,6 @@
-#banner {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-    text-align: center;
-    height: 400px;
-    background-image: url(../../../assets/belfast_city_hall.jpg);
-    position: relative;
-    margin-top: 30px;
-  }
-  .layer {
-    background-color: rgba(0, 128, 0, 0.7);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  #banner-title {
-    color: white;
-    font-size: 42px;
-    font-weight: bold;
-    padding-top: 90px;
-  }
-  #btn-banner {
-    border-color: white;
-    margin: auto;
-    font-size: 20px;
-    color: white;
-    margin-top: 30px;
-  }
-  #btn-banner:hover {
-    border-color: black;
-    color: black;
-  }
+.lock-down-title {
+  color:green;
+}
+.lockdown-dates {
+  color:red;
+}
