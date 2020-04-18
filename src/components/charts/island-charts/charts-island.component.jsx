@@ -1,5 +1,6 @@
 import React from 'react';
 import CityComparison from './island-city-chart.component';
+import IEGender from './ie-gender-chart.component';
 
 
 class IslandCharts extends React.Component {
@@ -16,6 +17,7 @@ class IslandCharts extends React.Component {
                 <hr />
                 <h5 className="charts-title">Island Wide Charts</h5>
                 <CityComparison />
+                <IEGender/>
             </React.Fragment>
         )
     }

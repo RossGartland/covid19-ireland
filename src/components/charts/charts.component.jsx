@@ -13,7 +13,6 @@ class Charts extends React.Component {
         }
     }
 
-
     render() {
         return (
             <React.Fragment>
