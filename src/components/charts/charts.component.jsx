@@ -1,11 +1,9 @@
 import React from 'react';
-import { Bar, Line, Pie } from 'react-chartjs-2';
-import ChartsNI from './charts-ni.component';
-import ChartsRoi from './charts-roi.component';
-import ChartsAll from './charts-all.component';
+import ChartsNI from './ni-charts/charts-ni.component';
+import ChartsRoi from './roi-charts/charts-roi.component';
+import ChartsIsland from './island-charts/charts-island.component';
 
-
-import './charts.component.css';
+import './charts.style.css';
 
 class Charts extends React.Component {
     constructor(props) {
@@ -19,10 +17,9 @@ class Charts extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <h5 id="chart-title">Chart Data was last updated on: 04/13/2020</h5>
             <ChartsNI />
             <ChartsRoi/>
-            <ChartsAll/>
+            <ChartsIsland/>
             </React.Fragment>
         )
     }

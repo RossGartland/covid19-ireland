@@ -1,0 +1,20 @@
+.charts-title {
+    padding-top: 50px;
+    font-weight: bold;
+    color:green;
+}
+.chart {
+    padding-top: 60px;
+    width: 70%;
+    margin: 0 auto;
+}
+.view-report {
+    color:red;
+    font-weight: bold;
+    padding-top:30px;
+    display:inline-block;
+}
+
+.view-report:hover {
+    color:green;
+}

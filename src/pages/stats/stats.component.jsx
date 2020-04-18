@@ -102,8 +102,6 @@ class Stats extends React.Component {
                 numCounties: countiesList.length
             })
         })
-
-
     }
 
 
@@ -122,7 +120,6 @@ class Stats extends React.Component {
                     <RegStats population={"4.904 million"} regValue={"Republic of Ireland"} Cases={this.state.roiCases} newCases={this.state.roiNewCases} Deaths={this.state.roiDeaths} newDeaths={this.state.roiNewDeaths} Tested={this.state.roiTested} />
                 </div>
                 <CountyStats counties={this.state.counties} />
-                <hr/>
                 <Charts />
                 <Sources/>
             </React.Fragment>
