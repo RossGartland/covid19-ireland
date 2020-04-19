@@ -3,6 +3,11 @@
     padding-bottom: 30px;
 }
 
+.sources-container h3 {
+    color:green;
+    font-weight: bold;
+}
+
 .sources-container a {
     text-decoration: none;
     color:black;
