@@ -14,21 +14,6 @@ class ChartsNI extends React.Component {
         }
     }
 
-    componentDidMount() {
-
-        const hscniRef = fb.database().ref('hscni');
-
-        //Gets link for HSCNI report.
-        hscniRef.on('value', snapshot => {
-
-            let hscni = snapshot.val();
-
-            this.setState({
-                hscniReport: hscni.hscni_surveillance_reports
-            })
-        })
-    }
-
     render() {
         return (
             <React.Fragment>
@@ -38,7 +23,7 @@ class ChartsNI extends React.Component {
                 <NIAge />
                 <NIGender />
                 <NICases/>
-                <a href={this.state.hscniReport} target="_blank" rel="noopener noreferrer" className="view-report">Click here to view the HSCNI surveillance reports.</a>
+                <a href="https://www.publichealth.hscni.net/publications/covid-19-surveillance-reports" target="_blank" rel="noopener noreferrer" className="view-report">Click here to view the HSCNI surveillance reports.</a>
             </React.Fragment>
         )
     }

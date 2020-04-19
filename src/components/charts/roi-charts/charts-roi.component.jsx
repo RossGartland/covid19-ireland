@@ -13,21 +13,6 @@ class ChartsROI extends React.Component {
         }
     }
 
-    componentDidMount() {
-
-        const hseRef = fb.database().ref('hse');
-
-        //Gets link for HSE report.
-        hseRef.on('value', snapshot => {
-
-            let hse = snapshot.val();
-
-            this.setState({
-                hseReport: hse.hse_daily_report
-            })
-        })
-    }
-
     render() {
         return (
             <React.Fragment>
@@ -37,7 +22,7 @@ class ChartsROI extends React.Component {
                 <ROIAge/>
                 <ROIGender/>
                 <ROIHospital/>
-                <a href={this.state.hseReport} target="_blank" rel="noopener noreferrer" className="view-report">Click here to view the HSE daily operations report.</a>
+                <a href="https://www.hse.ie/eng/services/news/newsfeatures/covid19-updates/" target="_blank" rel="noopener noreferrer" className="view-report">Click here to view the HSE daily operations report.</a>
             </React.Fragment>
         )
     }
