@@ -17,6 +17,7 @@ class Charts extends React.Component {
     render() {
         return (
             <React.Fragment>
+            <hr/>
             <Collapsible trigger="View Northern Ireland Charts" triggerWhenOpen="Close Northern Ireland Charts">
             <ChartsNI />
             </Collapsible>

@@ -1,6 +1,7 @@
-
-#county-data-text {
+.county-stats-title {
     padding-top: 30px;
+    font-weight: bold;
+    color: green;
 }
 .county-table {
     margin-top: 20px;

@@ -1,19 +1,19 @@
 import React from 'react';
 import './county-stats.style.css';
 
-class CountyStats extends React.Component {
+class CouncilStats extends React.Component {
 
     render() {
 
         return (
             <div>
                 <hr/>
-                <h5 className="county-stats-title">Republic of Ireland Figures By County</h5>
+                <h5 className="county-stats-title">Northern Ireland Figures By Council District</h5>
                 <p>Figures represented by N/A are in place because there is currently no data avaible.</p>
                 <table class="table table-striped county-table">
                     <thead>
                         <tr>
-                            <th scope="col">County</th>
+                            <th scope="col">Council</th>
                             <th scope="col">Cases</th>
                             <th scope="col">Deaths</th>
                             <th scope="col">Tested</th>
@@ -23,13 +23,13 @@ class CountyStats extends React.Component {
 
 
                         {
-                            this.props.counties && this.props.counties.length ?
-                                this.props.counties.map(item =>
-                                    <tr key={item.countyName}>
-                                        <td>{item.countyName}</td>
-                                        <td>{item.countyCases}</td>
-                                        <td>{item.countyDeaths}</td>
-                                        <td>{item.countyTested}</td>
+                            this.props.council && this.props.council.length ?
+                                this.props.council.map(item =>
+                                    <tr key={item.councilName}>
+                                        <td>{item.councilName}</td>
+                                        <td>{item.councilCases}</td>
+                                        <td>{item.councilDeaths}</td>
+                                        <td>{item.councilTested}</td>
                                     </tr>
 
                                 )
@@ -42,4 +42,4 @@ class CountyStats extends React.Component {
         )
     }
 }
-export default CountyStats;
+export default CouncilStats;

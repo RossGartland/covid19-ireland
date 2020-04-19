@@ -4,6 +4,7 @@ import LockdownBanner from '../../components/banner/home-banner/home-banner.comp
 import Overall from '../../components/overall-stats/overall-stats.component';
 import RegStats from '../../components/regional-stats/regional-stats.component';
 import CountyStats from '../../components/county-stats/county-stats.component';
+import CouncilStats from '../../components/county-stats/council-stats.component';
 import * as firebase from 'firebase';
 import fb from '../../firebase';
 import Charts from '../../components/charts/charts.component';
@@ -70,6 +71,30 @@ class Stats extends React.Component {
         })
 
         //Creates a reference to a location in the DB
+        const councilsRef = fb.database().ref('councils');
+
+        //Gets data from reference.
+        councilsRef.on('value', snapshot => {
+
+            let councils = snapshot.val();//Holds the snapshot
+            let councilsList = [];//Holds counties.
+
+            //Loops through each county and pushes them into countiesList array.
+            for (let item in councils) {
+                councilsList.push({
+                    councilName: councils[item].name,
+                    councilCases: councils[item].cases,
+                    councilDeaths: councils[item].deaths,
+                    councilTested: councils[item].tested
+                })
+            }
+
+            this.setState({
+                councils: councilsList
+            })
+        })
+
+        //Creates a reference to a location in the DB
         const countiesRef = fb.database().ref('counties');
 
         //Gets data from reference.
@@ -88,17 +113,8 @@ class Stats extends React.Component {
                 })
             }
 
-            let newCountiesNamesList = [];//Holds counties.
-
-            for(let item in counties) {
-                newCountiesNamesList.push({
-                    name: counties[item].name,
-                })
-            }
-
             this.setState({
                 counties: countiesList,
-                countiesNamesList: newCountiesNamesList,
                 numCounties: countiesList.length
             })
         })
@@ -119,8 +135,9 @@ class Stats extends React.Component {
                     <RegStats population={"1.882 million"} regValue={"Northern Ireland"} Cases={this.state.niCases} newCases={this.state.niNewCases} Deaths={this.state.niDeaths} newDeaths={this.state.niNewDeaths} Tested={this.state.niTested} />
                     <RegStats population={"4.904 million"} regValue={"Republic of Ireland"} Cases={this.state.roiCases} newCases={this.state.roiNewCases} Deaths={this.state.roiDeaths} newDeaths={this.state.roiNewDeaths} Tested={this.state.roiTested} />
                 </div>
+                <CouncilStats council={this.state.councils}/>
                 <CountyStats counties={this.state.counties} />
-                <Charts />
+                <Charts/>
                 <Sources/>
             </React.Fragment>
         )
