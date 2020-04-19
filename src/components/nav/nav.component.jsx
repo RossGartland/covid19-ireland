@@ -9,14 +9,16 @@ const MyNav = () => {
     const handleScroll = () => {
         const position = window.pageYOffset;
         setSrollPosition(position);
+        console.log(window.innerWidth);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
 
+    
 
     return (
         <div>
-            <Navbar collapseOnSelect className="navbar navbar-expand-lg navbar-light navbar-inverse nav-fill w-100" expand="lg" style={{ background: window.scrollY > 0 ? "white" : "transparent" }}>
+            <Navbar collapseOnSelect className="navbar navbar-expand-lg navbar-light navbar-inverse nav-fill w-100" expand="lg" style={{ background: window.scrollY > 0 || window.innerWidth < 900 ? "rgb(233, 236, 239)" : "transparent" }}>
                 <Navbar.Brand href="#">COVID-19 IRELAND</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" >
