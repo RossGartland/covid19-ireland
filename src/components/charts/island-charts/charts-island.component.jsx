@@ -15,7 +15,6 @@ class IslandCharts extends React.Component {
         return (
             <React.Fragment>
                 <hr />
-                <h5 className="charts-title">Island Wide Charts</h5>
                 <CityComparison />
                 <IEGender/>
             </React.Fragment>

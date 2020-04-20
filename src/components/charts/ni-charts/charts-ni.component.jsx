@@ -18,7 +18,6 @@ class ChartsNI extends React.Component {
         return (
             <React.Fragment>
                 <hr/>
-                <h5 className="charts-title">Northern Ireland Charts</h5>
                 <NICouncil />
                 <NIAge />
                 <NIGender />

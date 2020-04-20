@@ -17,7 +17,6 @@ class ChartsROI extends React.Component {
         return (
             <React.Fragment>
                 <hr />
-                <h5 className="charts-title">Republic of Ireland Charts</h5>
                 <ROICounty />
                 <ROIAge/>
                 <ROIGender/>
