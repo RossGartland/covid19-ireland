@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import RossImage from '../../assets/ross_g.jpg'
 import JordanImage from '../../assets/jordan_S.jpg';
 import AboutDev from '../../components/about-dev/about-dev.component';
@@ -10,7 +10,6 @@ import './about.style.css';
 
 const About = () => {
 
-    const [image, name, title, linkedin, github] = useState("");
 
     return (
         <div className="about-container">
@@ -20,9 +19,9 @@ const About = () => {
             Please consider that this website is in early stages and may contain bugs. We wanted to get it out to YOU as soon as possible.
             If you want to report an issue or suggest a future development - Please contact us on our Twitter, Email or LinkedIn profiles. </p>
 
-            <FontAwesomeIcon icon={faTwitter}/> <a href="https://twitter.com/covid19ire_web">@covid19ire_web</a>
+            <FontAwesomeIcon icon={faTwitter} /> <a href="https://twitter.com/covid19ire_web">@covid19ire_web</a>
             <br />
-            <FontAwesomeIcon icon={faEnvelope}/> <a href="mailto:covid19irelandwebsite@gmail.com<">covid19irelandwebsite@gmail.com</a>
+            <FontAwesomeIcon icon={faEnvelope} /> <a href="mailto:covid19irelandwebsite@gmail.com<">covid19irelandwebsite@gmail.com</a>
 
             <hr class="my-4" />
             <div class="container">

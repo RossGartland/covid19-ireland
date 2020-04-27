@@ -11,22 +11,21 @@ import './covid-info.style.css';
 class CovidInfo extends React.Component {
     constructor(props) {
         super(props)
-        this.state ={
-        
+        this.state = {
+
         }
     }
 
-    componentDidMount() {
-
+    runScript = () => {
         const script = document.createElement("script");
         script.src = "https://platform.twitter.com/widgets.js";
         script.async = true;
-
         document.body.appendChild(script);
+    }
 
+    getUpdateText = () => {
         const updateRef = fb.database().ref('updates').orderByValue().limitToLast(10)
 
-        
         //Gets data from reference.
         updateRef.on('value', snapshot => {
 
@@ -41,10 +40,14 @@ class CovidInfo extends React.Component {
             }
 
             this.setState({
-                updates: updatesList.reverse()        
+                updates: updatesList.reverse()
             })
         })
+    }
 
+    componentDidMount() {
+        this.runScript();
+        this.getUpdateText();
     }
 
     render() {
@@ -52,8 +55,8 @@ class CovidInfo extends React.Component {
             <div>
                 <HeadingCommon title={"Latest Coronavirus Updates"} bgImage={covidImage} />
                 <br />
-                <Updates updates={this.state.updates}/>
-                <br/>
+                <Updates updates={this.state.updates} />
+                <br />
                 <a class="twitter-timeline" data-width="600" data-height="500" href="https://twitter.com/covid19ire_web?ref_src=twsrc%5Etfw">Tweets by covid19ire_web</a>
                 <br />
                 <a class="twitter-timeline" data-width="600" data-height="500" href="https://twitter.com/merrionstreet?ref_src=twsrc%5Etfw">Tweets by merrionstreet</a>

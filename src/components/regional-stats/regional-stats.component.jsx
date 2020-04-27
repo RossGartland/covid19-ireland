@@ -1,11 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './regional-stats.style.css';
 
 const RegStats = (props) => {
-
-    function handleChange(event) {
-        props.onChange(event.target.regValue);
-      }
 
     return (
         <div class="card" id="reg-stats-card">

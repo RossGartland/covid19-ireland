@@ -1,15 +1,7 @@
 import React from 'react'
-
 import './choose-region.style.css';
 
 const ChooseRegion = (props) => {
-
-    function handleChange(event) {
-        props.onChange(event.target.region);
-        props.onChange(event.target.text);
-        props.onChange(event.target.onClick);
-        props.onChange(event.target.link);
-    }
 
     return (
         <div class="card" id="work-region-card">

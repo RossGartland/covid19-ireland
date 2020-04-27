@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import ChooseRegion from '../../components/work/choose-region/choose-region.component';
 
 
@@ -6,7 +6,6 @@ import './out-of-work.style.css';
 
 const Work = () => {
 
-    const [region, text, link] = useState("");
     
     return (
         <div className="advice-container">
