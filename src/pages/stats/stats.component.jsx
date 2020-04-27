@@ -16,13 +16,16 @@ class Stats extends React.Component {
         super();
         this.state = {
             regValue: "",
+            niCases: "",
+            roiCases: "",
+            niDeaths: "",
+            roiDeaths: "",
+            niTested: "",
+            roiTested: ""
         }
     }
 
-  
-    componentDidMount() {
-        
-
+    getNIStats() {
         //Creates a reference to a location in the DB
         const niRef = fb.database().ref('ni');
 
@@ -36,9 +39,12 @@ class Stats extends React.Component {
                 niDeaths: ni.deaths,
                 niNewDeaths: ni.newDeaths,
                 niTested: ni.tested,
+                lastUpdated: ni.lastUpdated
             })
         })
+    }
 
+    getROIStats() {
         //Creates a reference to a location in the DB
         const roiRef = fb.database().ref('roi');
 
@@ -51,25 +57,12 @@ class Stats extends React.Component {
                 roiNewCases: roi.newCases,
                 roiDeaths: roi.deaths,
                 roiNewDeaths: roi.newDeaths,
-                roiTested: roi.tested,            
+                roiTested: roi.tested,
             })
         })
+    }
 
-        //Creates a reference to a location in the DB
-        const ieRef = fb.database().ref('island');
-
-        ieRef.on('value', snapshot => {
-
-            let ie = snapshot.val();//Holds the snapshot
-
-            this.setState({
-                totalCases: ie.cases,
-                totalDeaths: ie.deaths,
-                totalTested: ie.tested,
-                lastUpdated: ie.lastUpdated
-            })
-        })
-
+    getCouncilStats() {
         //Creates a reference to a location in the DB
         const councilsRef = fb.database().ref('councils');
 
@@ -77,9 +70,9 @@ class Stats extends React.Component {
         councilsRef.on('value', snapshot => {
 
             let councils = snapshot.val();//Holds the snapshot
-            let councilsList = [];//Holds counties.
+            let councilsList = [];//Holds council.
 
-            //Loops through each county and pushes them into countiesList array.
+            //Loops through each county and pushes them into councilist array.
             for (let item in councils) {
                 councilsList.push({
                     councilName: councils[item].name,
@@ -94,6 +87,9 @@ class Stats extends React.Component {
             })
         })
 
+    }
+
+    getCountyStats() {
         //Creates a reference to a location in the DB
         const countiesRef = fb.database().ref('counties');
 
@@ -120,6 +116,12 @@ class Stats extends React.Component {
         })
     }
 
+    componentDidMount() {
+        this.getNIStats();
+        this.getROIStats();
+        this.getCouncilStats();
+        this.getCountyStats();
+    }
 
     render() {
         return (
@@ -127,21 +129,23 @@ class Stats extends React.Component {
                 <div class="parallax">
                     <Hero />
                 </div>
-                <LockdownBanner/>
-                <Overall totalPopulation={"6.786 million"} totalCases={this.state.totalCases} newTotalCases={this.state.niNewCases + this.state.roiNewCases} 
-                totalDeaths={this.state.totalDeaths} newTotalDeaths={this.state.roiNewDeaths + this.state.niNewDeaths} totalTested={this.state.totalTested} 
-                lastUpdated={this.state.lastUpdated}/>
+                <LockdownBanner />
+                <Overall niCases={this.state.niCases} roiCases={this.state.roiCases}
+                    newTotalCases={this.state.niNewCases + this.state.roiNewCases} niDeaths={this.state.niDeaths} 
+                    roiDeaths={this.state.roiDeaths} newTotalDeaths={this.state.roiNewDeaths + this.state.niNewDeaths}
+                    niTested={this.state.niTested} roiTested={this.state.roiTested} lastUpdated={this.state.lastUpdated} />
                 <div className="regions">
-                    <RegStats population={"1.882 million"} regValue={"Northern Ireland"} Cases={this.state.niCases} newCases={this.state.niNewCases} Deaths={this.state.niDeaths} newDeaths={this.state.niNewDeaths} Tested={this.state.niTested} />
-                    <RegStats population={"4.904 million"} regValue={"Republic of Ireland"} Cases={this.state.roiCases} newCases={this.state.roiNewCases} Deaths={this.state.roiDeaths} newDeaths={this.state.roiNewDeaths} Tested={this.state.roiTested} />
+                    <RegStats population={"1.882 million"} regValue={"Northern Ireland"} Cases={this.state.niCases} 
+                    newCases={this.state.niNewCases} Deaths={this.state.niDeaths} newDeaths={this.state.niNewDeaths} Tested={this.state.niTested} />
+                    <RegStats population={"4.904 million"} regValue={"Republic of Ireland"} Cases={this.state.roiCases} 
+                    newCases={this.state.roiNewCases} Deaths={this.state.roiDeaths} newDeaths={this.state.roiNewDeaths} Tested={this.state.roiTested} />
                 </div>
-                <CouncilStats council={this.state.councils}/>
+                <CouncilStats council={this.state.councils} />
                 <CountyStats counties={this.state.counties} />
-                <Charts/>
-                <Sources/>
+                <Charts />
+                <Sources />
             </React.Fragment>
         )
     }
 }
-
 export default Stats;
