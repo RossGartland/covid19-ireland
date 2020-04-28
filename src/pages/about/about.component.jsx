@@ -9,8 +9,6 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import './about.style.css';
 
 const About = () => {
-
-
     return (
         <div className="about-container">
             <h1 class="display-4">Who are we?</h1>

@@ -9,12 +9,9 @@ const MyNav = () => {
     const handleScroll = () => {
         const position = window.pageYOffset;
         setSrollPosition(position);
-        console.log(window.innerWidth);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-
-    
 
     return (
         <div>
