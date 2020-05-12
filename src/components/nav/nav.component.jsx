@@ -26,6 +26,8 @@ const MyNav = () => {
                             <NavDropdown.Item href="#/covidupdates">UPDATES</NavDropdown.Item>
                             <NavDropdown.Item href="#/work">WORK</NavDropdown.Item>
                             <NavDropdown.Item href="#/faq">F&Q</NavDropdown.Item>
+                            <NavDropdown.Item href="#/niroadmap">NI ROADMAP</NavDropdown.Item>
+                            <NavDropdown.Item href="#/roiroadmap">ROI ROADMAP</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="#/about">ABOUT</Nav.Link>
                     </Nav>

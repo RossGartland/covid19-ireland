@@ -11,6 +11,7 @@ import WorkInfoNI from "./pages/out-of-work/work-info-ni.component";
 import WorkInfoRoi from "./pages/out-of-work/work-info-roi.component";
 import CovidInfo from "./pages/covid-info/covid-info.component";
 import "./App.css";
+import ROIRoadmap from "./pages/roi-roadmap/roi-roadmap.component";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/Workni" component={WorkInfoNI} />
           <Route path="/Workroi" component={WorkInfoRoi} />
           <Route path="/covidupdates" component={CovidInfo} />
+          <Route path='/roiroadmap' component={ROIRoadmap}/>
         </div>
       </HashRouter>
       <Footer />

@@ -9,8 +9,8 @@ const HomeBanner = () => {
                 <div class="container">
                     <h1 className="display-5 lock-down-title" >Lockdown Announcement</h1>
                     <Fade>
-                    <p class="lead">Northern Ireland to be in lockdown until <span className="lockdown-dates">9th May.</span></p>
-                    <p class="lead">Republic of Ireland to be in lockdown until <span className="lockdown-dates">5th May.</span></p>
+                    <p class="lead">Northern Ireland to be in lockdown until <span className="lockdown-dates">30th May.</span></p>
+                    <p class="lead">Republic of Ireland Roadmap <span className="lockdown-dates">5th May.</span></p>
                     </Fade>
                 </div>
             </div>
