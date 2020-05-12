@@ -129,7 +129,6 @@ class Stats extends React.Component {
                 <div class="parallax">
                     <Hero />
                 </div>
-                <LockdownBanner />
                 <Overall niCases={this.state.niCases} roiCases={this.state.roiCases}
                     newTotalCases={this.state.niNewCases + this.state.roiNewCases} niDeaths={this.state.niDeaths} 
                     roiDeaths={this.state.roiDeaths} newTotalDeaths={this.state.roiNewDeaths + this.state.niNewDeaths}

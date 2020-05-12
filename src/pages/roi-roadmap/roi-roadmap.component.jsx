@@ -3,7 +3,6 @@ import './roi-roadmap.style.css';
 import DownArrow from '../../arrow/down-arrow.component';
 
 const ROIRoadmap = () => {
-
     return (
         <div className="roadmap-container">
             <h1>Republic of Ireland's Roadmap on Easing Restrictions </h1>
