@@ -21,12 +21,12 @@ const MyNav = () => {
                 <Navbar.Collapse id="responsive-navbar-nav" >
                     <Nav className="mr-auto">
                         <Nav.Link href="#/">HOME</Nav.Link>
-                        <Nav.Link href="#/map">MAP</Nav.Link>
-                        <NavDropdown title="INFO" id="collasible-nav-dropdown">
+                        <NavDropdown title="MORE" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#/covidupdates">UPDATES</NavDropdown.Item>
                             <NavDropdown.Item href="#/work">WORK</NavDropdown.Item>
                             <NavDropdown.Item href="#/faq">F&Q</NavDropdown.Item>
-                            <NavDropdown.Item href="#/niroadmap">NI ROADMAP</NavDropdown.Item>
+                            <NavDropdown.Item href="#/map">MAP</NavDropdown.Item>
+                            <NavDropdown.Item href="#/ni-plan">NI PATHWAY TO RECOVERY</NavDropdown.Item>
                             <NavDropdown.Item href="#/roiroadmap">ROI ROADMAP</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="#/about">ABOUT</Nav.Link>

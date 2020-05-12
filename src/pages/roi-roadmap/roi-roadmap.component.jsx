@@ -5,7 +5,7 @@ import DownArrow from '../../arrow/down-arrow.component';
 const ROIRoadmap = () => {
 
     return (
-        <div className="roi-roadmap-container">
+        <div className="roadmap-container">
             <h1>Republic of Ireland's Roadmap on Easing Restrictions </h1>
             <div class="card phase-card">
                 <div class="card-body">
