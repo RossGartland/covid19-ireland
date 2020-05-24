@@ -1,6 +1,5 @@
 import React from 'react';
 import Hero from '../../components/hero/hero-home/hero-home.component';
-import LockdownBanner from '../../components/banner/home-banner/home-banner.component';
 import Overall from '../../components/overall-stats/overall-stats.component';
 import RegStats from '../../components/regional-stats/regional-stats.component';
 import CountyStats from '../../components/county-stats/county-stats.component';
@@ -9,6 +8,8 @@ import * as firebase from 'firebase';
 import fb from '../../firebase';
 import Charts from '../../components/charts/charts.component';
 import Sources from '../../components/sources/sources.component';
+import Popup from 'react-popup';
+import '../../components/pop-up/pop-up.style.css';
 import './stats.style.css';
 
 class Stats extends React.Component {
@@ -121,6 +122,7 @@ class Stats extends React.Component {
         this.getROIStats();
         this.getCouncilStats();
         this.getCountyStats();
+        Popup.alert('As of 24/05/2020, this website is no longer updated.');
     }
 
     render() {
@@ -129,6 +131,7 @@ class Stats extends React.Component {
                 <div class="parallax">
                     <Hero />
                 </div>
+                <Popup/>
                 <Overall niCases={this.state.niCases} roiCases={this.state.roiCases}
                     newTotalCases={this.state.niNewCases + this.state.roiNewCases} niDeaths={this.state.niDeaths} 
                     roiDeaths={this.state.roiDeaths} newTotalDeaths={this.state.roiNewDeaths + this.state.niNewDeaths}
